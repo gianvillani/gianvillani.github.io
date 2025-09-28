@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    background-color: rgb(64, 95, 122);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+
+.nameTop {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.navbar a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+.navbar a.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+
+}
+
+/****************************************Project Page********************************/
+
+.mainBox {
+    border: 8px solid black;
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+    height: auto;
+    width: auto;
+    margin-top: 65px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/*********************Left Project*********************************/
+
+.leftProject {
+    border: 8px solid black;
+    background-color: rgb(125, 190, 187);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    height: 800px;
+}
+
+.leftProject h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.leftProject img {
+    border: 8px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+.leftProject p {
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/******************************Right Project************************/
+
+.rightProject {
+    border: 8px solid black;
+    background-color: rgb(125, 190, 187);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    height: 800px;
+}
+
+.rightProject h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.rightProject img {
+    border: 8px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+.rightProject p {
+    margin: 0px 15px 0px 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*****************Button*****************/
+
+.btn {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}

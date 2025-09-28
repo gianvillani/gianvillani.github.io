@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body{
+    height: 800px;
+    margin: 0;
+    background-color: rgb(64, 95, 122);
+    
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+
+.nameTop {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.navbar a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+.navbar a.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+
+}
+
+/*************************************main about me box***************************/
+
+.mainBox {
+    margin: 60px 30px;
+    border: 8px solid black;
+    height: auto;
+    background-color: grey;
+}
+
+.mainBox h3 {
+    text-align: center;
+}
+
+.mainBox p {
+    font-size: 20px;
+}
+
+/***************************************Marine Box*************************************/
+
+.marineBox {
+    border: 8px solid black;
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    height: auto;
+    background-color: rgb(177, 201, 201);
+}
+
+.marineBox img {
+    border: 8px solid black;
+    height: 239px;
+    width: 245px;
+    object-fit: cover;
+    flex: 0 0 245px;            
+    display: block;
+}
+
+/***********************************Work Box***************************************/
+
+.workBox {
+    border: 8px solid black;
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    height: auto;
+    background-color: rgb(177, 201, 201);
+}
+
+.workBox img {
+    border: 8px solid black;
+    height: 239px;
+    width: 245px;
+    object-fit: cover;
+    flex: 0 0 245px;           
+    display: block;
+}
+
+/*******************************School Box***********************************/
+
+.schoolBox {
+    border: 8px solid black;
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    height: auto;
+    background-color: rgb(177, 201, 201);
+}
+
+.schoolBox img {
+    border: 8px solid black;
+    height: 239px;
+    width: 245px;
+    flex: 0 0 245px;            
+    display: block;
+}

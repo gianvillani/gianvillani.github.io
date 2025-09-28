@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    background-color: rgb(64, 95, 122);
+}
+
+
+
+/* --------------------------------Top section----------------------------------------------------------------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+
+.nameTop {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.navbar a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+.navbar a.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+
+}
+
+/* -----------------------------------------------Main Home Section-------------------------------------------------------*/
+
+.mainHome {
+    display: flex;
+    margin: 100px 15px 15px 15px;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50%;
+    min-height: 50px;
+    /*border: 8px solid black;*/
+}
+
+.UCF {
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
+    justify-items: left;
+}
+
+.mainHome h1 {
+    color: gold;
+    font-size: 80px;
+}
+
+.mainHome h3 {
+    color: white;
+    font-size: 40px;
+}
+
+
+.btn {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.btnDownload {
+    text-align: center;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:active {
+  color: #000;
+  font-weight: bold;
+}
+
+/*********************************************Main Home Description Section*********************************/
+
+.mainHomeDescription img {
+    border: 8px solid black;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 15px 0px 0px 15px;
+}
+
+.mainHomeDescription {
+    display: flex;
+    margin: 15px 15px 70px 15px;
+    padding-bottom: 15px;
+
+}
+
+.mainHomeDescription h3 {
+    display: flex;
+    margin: 15px;
+    font-size: 40px;
+    text-align: justify;
+}
+
+/************************************************Resume section**********************************************/
+/*rgb(177, 201, 201)*/
+.resume {
+    border: 8px solid black;
+    margin: 15px;
+    background-color: #a3c6c9;
+    padding: 50px;
+}
+
+.resumeHeader h2 {
+    font-size: 35px;
+}
+
+.resumeHeader p {
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 8px solid black;
+}
+
+
+
+/****************************Education Section**********************************/
+
+.EducationHeader {
+    border-bottom: 8px solid black;
+    margin-top: 50px;
+}
+
+.EducationHeader h2 {
+    font-size: 35px;
+}
+
+.Education h3 {
+    font-size: 20px;
+    color: navy
+}
+
+.edList {
+    margin-top: 5px;
+    margin-left: 19px;
+    color: black
+}
+
+
+/*************************************Work History Section****************************/
+
+.workHistoryHeader {
+    border-bottom: 8px solid black;
+    margin-top: 50px;
+}
+
+.workHistoryHeader h2 {
+    font-size: 35px;
+}
+
+.workHistory h3 {
+    font-size: 20px;
+    color: navy;
+}
+
+.workList {
+    margin-top: 5px;
+    margin-left: 19px;
+    color: black;
+}
+
+.server {
+    margin-top: 10px;
+}
+
+.piper {
+    margin-top: 10px;
+}
+
+.operator {
+    margin-top: 10px;
+}
+
+/****************************************Skills section***********************************/
+
+.skillsSectionHeader {
+    border-bottom: 8px solid black;
+    margin-top: 50px;
+}
+
+.skillsSectionHeader h2 {
+    font-size: 35px;
+}
+
+.skillsSectionBigBox {
+    
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+
+}
+
+.skillsSectionBigBox ul {
+    font-size: 20px;
+}
+
+.skillsList {
+    font-size: 30px;
+    color: navy;
+}
+
+.softSkillsBox {
+    
+     flex: 1;
+     padding: 50px;
+     
+}
+
+.languagesBox {
+    
+     flex: 1;
+     padding: 50px;
+}
+
+.hardSkillsBox {
+     
+     flex: 1;
+     padding: 50px;
+}
+
+
+/***********************************************Certifications Section**************************************/
+
+
+.certificationsHeader {
+    border-bottom: 8px solid black;
+    margin-top: 50px;
+}
+
+.certificationsHeader h2 {
+    font-size: 35px;
+}
+
+.certList {
+    margin-top: 5px;
+    margin-left: 19px;
+    color: black
+}
+
+/****************************************Projects*****************************/
+
+.projectsHeader {
+    border-bottom: 8px solid black;
+    margin-top: 50px;
+}
+
+.projectsHeader h2 {
+    font-size: 35px;
+}
+
+.projectsList {
+    margin-top: 5px;
+    margin-left: 19px;
+    color: black
+}
